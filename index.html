@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>📮 Tool Kit App 🚚</title>	
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+	<!--JavaScript-->
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/viaCepAPI.js"></script>
+	
+</head>
+<body style="background-color:#F3F5F0";>	
+<div class="container">
+	<div class="box mb-4 shadow-sm"> 
+		<form action="getPostCode();" style="margin: 15px;">
+			<div class="form-group"  >
+				<label for="postCode" style="color: black;">📫 Post Code</label><br>
+				<input type="text" maxlength="5" id="postCode1" style="width:55px;" onkeyup="configPostCode1()" /> <b>-</b>
+				<input type="text" maxlength="3" id="postCode2" style="width:35px;" onkeyup="configPostCode2()" />
+				<button type="button" onclick="postCodeValidation()" id="btnSearch" class="btn btn-primary" style="color: white;">Search</button>
+				<button type="button" onclick="clearForm()" id="btnClear" class="btn btn-danger" style="color: white;">Clear</button>
+			</div>
+			
+			<div class="form-group">
+				<label for="address" style="color: black;">🏠 Address</label><br>
+				<input type="text" id="address" class="form-control"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="district" style="color: black;">📍 District</label><br>
+				<input type="text" id="district" class="form-control"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="city" style="color: black;">🏙️ City</label><br>
+				<input type="text" id="city" class="form-control"/>
+			</div>
+			
+			<div class="form-group">
+				<label for="state" style="color: black;">🗺️ State</label><br>
+				<select id="state" name="state" class="form-control" style="color: black">
+					<option value="">Select state</option>
+					<option value="AC">Acre</option>
+					<option value="AL">Alagoas</option>
+					<option value="AP">Amapá</option>
+					<option value="AM">Amazonas</option>
+					<option value="BA">Bahia</option>
+					<option value="CE">Ceará</option>
+					<option value="DF">Distrito Federal</option>
+					<option value="ES">Espírito Santo</option>
+					<option value="GO">Goiás</option>
+					<option value="MA">Maranhão</option>
+					<option value="MT">Mato Grosso</option>
+					<option value="MS">Mato Grosso do Sul</option>
+					<option value="MG">Minas Gerais</option>
+					<option value="PA">Pará</option>
+					<option value="PB">Paraíba</option>
+					<option value="PR">Paraná</option>
+					<option value="PE">Pernambuco</option>
+					<option value="PI">Piauí</option>
+					<option value="RJ">Rio de Janeiro</option>
+					<option value="RN">Rio Grande do Norte</option>
+					<option value="RS">Rio Grande do Sul</option>
+					<option value="RO">Rondônia</option>
+					<option value="RR">Roraima</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="SP">São Paulo</option>
+					<option value="SE">Sergipe</option>
+					<option value="TO">Tocantins</option>
+					<option value="EX">Estrangeiro</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label for="weather" style="color: black;">🌡️ Weather (°C)</label><br>
+				<input type="text" id="weather" class="form-control"/>
+			</div>
+		</form>
+	</div> 
+</div> 
+</body>
+</html>
+
+
